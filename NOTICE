@@ -1,0 +1,24 @@
+1) event_generator_v2.C
+
+An event generator that can take 5 arguments (Int_t nEvents, Int_t nTracks, 
+Double_t sigmaTracks, Double_t v2, Double_t sigmaV2) and generate a track 
+distribution with a elliptic flow v2 and store them in a tree (phi_dist.root).
+
+To run do:
+> root
+> .L MyClasses.C+
+> .L event_generator_v2.C+
+> event_generator_v2(1000, 1000, 10, 0.1, 0.01)
+
+##############################################################################
+
+2) analyze_v2.C
+
+Reading back the data from the output file and analyzing the data using the 
+2-particle correlation method and Q vectors method.
+
+To run do:
+> root
+> .L MyClasses.C+
+> .L analyze_v2.C+
+> analyze_v2_2particle()
